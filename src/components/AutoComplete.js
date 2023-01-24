@@ -1,4 +1,8 @@
 import React, { useEffect, useRef,useState } from 'react';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import { LocationOnOutlined, SearchOutlined } from '@mui/icons-material';
+
 import styled from 'styled-components';
 import Loading from 'components/Loading';
 
@@ -51,7 +55,21 @@ const AutoComplete = ({ map, mapApi, addplace }) => {
     <Wrapper>
       <section className="section search">
         <form className="search-form">
-          <div className="form-control">
+        <h3>Find Your Location!</h3>
+        <TextField
+            inputRef={inputRef}
+            id="outlined-start-adornment"
+            onFocus={clearSearchBox}
+            placeholder="Enter a location"
+            sx={{ m: 1 }}
+            InputProps={{
+              startAdornment: <InputAdornment position="start"><LocationOnOutlined /></InputAdornment>,
+              endAdornment: <InputAdornment position="end"><SearchOutlined /></InputAdornment>,
+            }}
+            fullWidth={true}
+          />
+
+          {/* <div className="form-control">
             <h3>Find Your Location!</h3>
             <input
               ref={inputRef}
@@ -59,7 +77,7 @@ const AutoComplete = ({ map, mapApi, addplace }) => {
               onFocus={clearSearchBox}
               placeholder="Enter a location"
             />
-          </div>
+          </div> */}
         </form>
       </section>
     </Wrapper>
