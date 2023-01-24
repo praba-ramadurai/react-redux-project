@@ -1,0 +1,165 @@
+:root {
+    --mainWhite: #fff;
+    --mainBackground: #f1f5f8;
+    --primaryBlue: #4a8fff;
+    --mainSpacing: 0.3rem;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+    --mainBorderRadius: 0.25rem;
+    --smallWidth: 85vw;
+    --maxWidth: 40rem;
+    --fullWidth: 1170px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--mainBackground);
+    line-height: 1.4;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h3 {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.10rem;
+    color: var(--mainWhite);
+    font-size: 22px;
+    text-align: center;
+}
+
+.section {
+    padding: 1rem 0;
+    position: absolute;
+    z-index: 5;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+}
+
+.search {
+    margin-top: 1rem;
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.search-form {
+    width: var(--smallWidth);
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+    background: var(--primaryBlue);
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: var(--mainBorderRadius);
+    box-shadow: var(--lightShadow);
+}
+
+.form-control label {
+    font-size: 14px;
+}
+
+.form-control input {
+    width: 100%;
+    border-radius: var(--mainBorderRadius);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.map-image {
+    height: 100%;
+    width: 100%;
+}
+
+#map {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.map-h2 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.google-map {
+    width: 100%;
+    height: 100vh;
+}
+
+.pin {
+    display: flex;
+    align-items: center;
+    width: 10px;
+    color: red;
+}
+
+.pin-icon {
+    font-size: 3rem;
+}
+
+.pin-text {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: var(--lightShadow);
+    margin: 0;
+    overflow: hidden;
+    font-family: cursive;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+@media screen and (min-width: 799px) {
+    .google-map {
+        height: 100vh;
+    }
+
+    .map-h2 {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .pin {
+        width: 15vw;
+    }
+
+    .pin-icon {
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .google-map {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .google-map {
+        height: 100vh;
+    }
+}   
