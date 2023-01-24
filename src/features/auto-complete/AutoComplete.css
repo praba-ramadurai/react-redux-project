@@ -123,15 +123,12 @@ input:focus {
     border-radius: 2px;
     box-shadow: var(--lightShadow);
     margin: 0;
-    overflow: hidden;
     font-family: cursive;
-    padding: 10px;
-    font-size: 14px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    padding: 2px;
+    font-size: 12px;
 }
-
 
 @media screen and (min-width: 799px) {
     .google-map {
