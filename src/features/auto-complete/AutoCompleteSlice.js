@@ -29,15 +29,6 @@ export const mapSlice = createSlice({
         setSelectedLocation: (state, action) => {
             state.selectedPlace = action.payload;
         },
-        setBias: (state, action) => {
-            state.bias = action.payload;
-        },
-        setBounds: (state, action) => {
-            state.bounds = action.payload;
-        },
-        setSelectedType: (state, action) => {
-            state.selectedType = action.payload;
-        },
     },
 });
 
@@ -47,8 +38,5 @@ export const selectMapApiLoaded = (state) => state.place.mapApiLoaded;
 export const selectMapInstance = (state) => state.place.mapInstance;
 export const selectMapApi = (state) => state.place.mapApi;
 export const selectPlace = (state) => state.place.selectedPlace;
-export const selectBias = (state) => state.place.bias;
-export const selectBounds = (state) => state.place.bounds;
-export const selectSelectedType = (state) => state.place.selectedType;
 
 export default mapSlice.reducer;
