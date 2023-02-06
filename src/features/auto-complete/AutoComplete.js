@@ -45,7 +45,6 @@ const Autocomplete = () => {
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: "AIzaSyAHQCGm6t8IgZ77_cJTbezg-wII-eboBtc",
             libraries: ["places", "geometry"],
           }}
           defaultCenter={place}
